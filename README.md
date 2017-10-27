@@ -9,6 +9,13 @@
 * папка `dist`:  содержит готовый проект с html файлом, шрифтами, рисунками оптимизированные для Google PageSpeed, и минифицированные css и js файлы
 
 
+## Как использовать шаблон
+
+1 [Скачайте](https://github.com/nurbol-sarsenbayev/start-template-gulp/archive/master.zip) start-template-gulp с GitHub;
+2 Установите модули Node.js выпольнив команду **npm i** в терминале;
+3 Установите пакеты Bower командой **bower i** в терминале;
+4 Запустите Bower-Installer командой **bower-installer**, чтобы копировать только нужные файлы с папкой bower_components в папку app/libs; 
+
 
 
 ## Bower
@@ -16,7 +23,7 @@
 **Bower** — клиентский пакетный менеджер, который упрощает установку сторонных библиотек с их зависимостями.  
 
 Если не установлен Bower на вашем компьютере глобально, то установте выпольнив в терминале комманду:
-```javascript
+```npm
     npm install -g bower
 ```
 
