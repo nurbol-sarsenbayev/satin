@@ -11,10 +11,10 @@
 
 ## Как использовать шаблон
 
-1 [Скачайте](https://github.com/nurbol-sarsenbayev/start-template-gulp/archive/master.zip) start-template-gulp с GitHub;
-2 Установите модули Node.js выпольнив команду **npm i** в терминале;
-3 Установите пакеты Bower командой **bower i** в терминале;
-4 Запустите Bower-Installer командой **bower-installer**, чтобы копировать только нужные файлы с папкой bower_components в папку app/libs; 
+1. [Скачайте](https://github.com/nurbol-sarsenbayev/start-template-gulp/archive/master.zip) start-template-gulp с GitHub;
+2. Установите модули Node.js выпольнив команду **npm i** в терминале;
+3. Установите пакеты Bower командой **bower i** в терминале;
+4. Запустите Bower-Installer командой **bower-installer**, чтобы копировать только нужные файлы с папкой bower_components в папку app/libs; 
 
 
 
