@@ -1,0 +1,14 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto", "../fonts/RobotoThin/Roboto-Thin", 100);
+@include font-face("roboto", "../fonts/RobotoThinItalic/Roboto-ThinItalic", 100, "italic");
+@include font-face("roboto", "../fonts/RobotoLight/Roboto-Light", 300);
+@include font-face("roboto", "../fonts/RobotoLightItalic/Roboto-LightItalic", 300, "italic");
+@include font-face("roboto", "../fonts/RobotoRegular/Roboto-Regular");
+@include font-face("roboto", "../fonts/RobotoItalic/Roboto-Italic", "normal", "italic");
+@include font-face("roboto", "../fonts/RobotoBold/Roboto-Bold", "bold");
+@include font-face("roboto", "../fonts/RobotoBoldItalic/Roboto-BoldItalic", "bold", "italic");
+@include font-face("roboto", "../fonts/RobotoMedium/Roboto-Medium", 500);
+@include font-face("roboto", "../fonts/RobotoMediumItalic/Roboto-MediumItalic", 500, "italic");
+@include font-face("roboto", "../fonts/RobotoBlack/Roboto-Black", 900);
+@include font-face("roboto", "../fonts/RobotoBlackItalic/Roboto-BlackItalic", 900, "italic");
