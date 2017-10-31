@@ -51,7 +51,7 @@ gulp.task('sass', function() {
         .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
         .pipe(rename({suffix: '.min', prefix : ''}))
         .pipe(autoprefixer(['last 15 versions']))
-        //.pipe(cleanCSS()) // Опционально, закомментировать при отладке
+        .pipe(cleanCSS()) // Опционально, закомментировать при отладке
         .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -63,9 +63,9 @@ gulp.task('watch', ['sass', 'libs-js', 'main-js', 'browser-sync'], function() {
 });
 
 gulp.task('imagemin', function() {
-    return gulp.src('app/img/**/*')
-        .pipe(cache(imagemin()))
-        .pipe(gulp.dest('dist/img')); 
+	return gulp.src('app/img/**/*')
+		.pipe(cache(imagemin()))
+		.pipe(gulp.dest('dist/img')); 
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'libs-js', 'main-js'], function() {
@@ -76,6 +76,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'libs-js', 'main-js'], fun
     ]).pipe(gulp.dest('dist'));
 
     var buildCss = gulp.src([
+		'app/css/libs.min.css',
         'app/css/main.min.css',
     ]).pipe(gulp.dest('dist/css'));
 

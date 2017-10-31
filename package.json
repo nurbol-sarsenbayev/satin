@@ -9,7 +9,7 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
-    "gulp-cache": "^0.5.0",
+    "gulp-cache": "0.5.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^3.4.0",
@@ -21,21 +21,10 @@
     "gulp-util": "^3.0.8",
     "vinyl-ftp": "^0.6.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nurbol-sarsenbayev/start-template-gulp.git"
-  },
   "keywords": [
     "gulp",
     "верстка"
   ],
   "author": "Nurbol Sarsenbayev",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nurbol-sarsenbayev/start-template-gulp/issues"
-  },
-  "homepage": "https://github.com/nurbol-sarsenbayev/start-template-gulp#readme"
+  "license": "ISC"
 }
