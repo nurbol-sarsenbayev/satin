@@ -5,8 +5,8 @@
     "Nurbol Sarsenbayev"
   ],
   "install": {
-    "path": "app/libs/", // указывается папка куда bower-installer перемещает файлы 
-    "sources": { // переопределяем значение свойства main bower.json файла пакета 
+    "path": "app/libs/",  
+    "sources": {  
       "bootstrap-grid": [
         "bower_components/bootstrap-grid/dist/bootstrap-grid.min.css"
       ],
