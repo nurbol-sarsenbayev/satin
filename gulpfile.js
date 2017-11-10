@@ -22,7 +22,8 @@ gulp.task('main-js', function() {
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify()) // Минифицирует js
-    .pipe(gulp.dest('app/js'));
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('libs-js', function() {
@@ -31,8 +32,7 @@ gulp.task('libs-js', function() {
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify()) // Минимизировать весь js (на выбор)
-    .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('app/js'));
 });
 
 gulp.task('browser-sync', function() {
@@ -58,7 +58,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', ['sass', 'libs-js', 'main-js', 'browser-sync'], function() {
     gulp.watch('app/sass/**/*.+(sass|scss)', ['sass']);
-    gulp.watch(['libs/**/*.js', 'app/js/main.js'], ['main-js']);
+    gulp.watch(['app/js/main.js'], ['main-js']);
     gulp.watch('app/*.html', browserSync.reload);
 });
 
