@@ -18,6 +18,86 @@ body {
 	opacity: 1;
 }
 
+.header {
+	&-nav {
+		display: flex;
+	}
+
+	&-menu {
+		flex-grow: 1;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			display: inline-block;
+			margin-right: 15px;
+
+			a {
+				font-size: 14px;
+				
+				&, &:hover, &:visited, &:link {
+					color: #000;
+					text-decoration: none;
+				}
+
+				&:hover {
+					padding: 3px 0;
+					border-bottom: 2px solid $accent;
+				}
+			}
+		}
+	}
+}
+
+.section {
+	&-title {
+		font-size: 23px;
+		font-family: "Lora";
+		color: $default_text_color;
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.2;
+		text-shadow: 0px 22px 18px rgba(0, 0, 0, 0.16);	  
+	}
+
+	&-header {
+	}
+
+	&-main {
+		background-color: rgb(182, 182, 182);
+
+		&-nav {
+			display: flex;
+
+			.logo {
+				width: 235px;
+			}
+
+			.contacts {
+				flex-grow: 1;
+				text-align: right;				
+			}
+		}
+	}
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&-garants {
+
+		li {
+			display: flex;
+			align-items: center;
+		}
+
+		img {
+		}
+	}
+}
 
 
 @import "media"; // Всегда в конце
