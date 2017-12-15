@@ -52,7 +52,6 @@ body {
 
 .section {
 	padding: 25px 0;
-	border: 1px solid #000;
 	min-height: 100vh;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -75,13 +74,26 @@ body {
 	}
 
 	&-main {
-		background-color: rgb(182, 182, 182);
+		background-color: #cfcfcf;
+		background-size: contain;
+
+		.header {
+			&-nav {
+				text-align: right;
+				justify-content: flex-end;
+			}
+			&-menu {
+				flex-grow: 0;
+			}
+		}
+
+
 
 		&-nav {
 			display: flex;
 
 			.logo {
-				width: 235px;
+				width: 167px;
 			}
 
 			.contacts {
@@ -276,6 +288,24 @@ body {
 			}
 		}
 
+	}
+
+	&-diagnostic {
+		li {
+			position: relative;
+			padding-left: 23px;
+
+			&:before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				width: 17px;
+				height: 17px;
+				content: '';
+				background: url('/img/diagnostic-list.png');
+			}
+		}
 	}
 }
 
