@@ -68,6 +68,7 @@ body {
 	&-header {
 		height: 38px;
 		line-height: 38px;
+		text-align: left;
 	}
 
 	&-main {
@@ -90,6 +91,92 @@ body {
 	&-garants {
 		.section-content {
 			text-align: center;			
+		}
+	}
+
+	&-services {
+		text-align: center;
+
+		&-text {
+			margin-bottom: 70px;
+		}
+
+		&-gallery {
+			&:after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+
+			&-item {
+				float: left;
+				width: 25%;
+				margin-bottom: 46px;
+
+				&-img {
+					position: relative;
+					display: inline-block;
+					background-color: rgb(227, 232, 226);
+					background-size: cover;
+					background-position: center;
+					background-repeat: none;
+					box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.17);
+					width: 187px;
+					height: 187px;
+					margin-bottom: 48px;
+					transition: transform 0.3s;
+
+					&:hover {
+						transform: scale(1.2, 1.2);
+						.section-services-gallery-item-cover {
+							display: flex;
+						}
+					}
+				}
+
+				&-title {
+					font-size: 14px;
+					color: rgb(64, 64, 64);
+					font-weight: bold;
+					text-transform: uppercase;
+					line-height: 1.2;				  
+					margin-bottom: 17px;
+				}
+
+				&-cover {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					padding-bottom: 20px;
+					display: none;
+					align-items: flex-end;
+					justify-content: center;
+					background-color: rgba(222, 255, 0, 0.8);
+				}
+
+				&-more {
+					position: relative;
+					border: 1px solid #fff;
+					font-size: 10px;
+					height: 24px;
+					line-height: 24px;
+					text-transform: uppercase;
+					color: #fff;
+					padding: 0 40px 0 10px;
+					cursor: pointer;
+
+					img {
+						position: absolute;
+						top: 50%;
+						right: 8px;
+						transform: translateY(-50%);
+						width: 21px;
+						height: 16px;
+					}
+				}
+			}
 		}
 	}
 }
