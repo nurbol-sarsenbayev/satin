@@ -94,6 +94,12 @@ body {
 		}
 	}
 
+	&-results {
+		.section-title {
+			margin-bottom: 25px;
+		}
+	}
+
 	&-services {
 		text-align: center;
 
@@ -231,6 +237,68 @@ body {
 			}
 		}
 
+	}
+}
+
+.carousel {
+	&-results {		
+		.owl {
+			&-nav {
+				position: absolute;
+				border: 7px solid $accent;
+				// width: 370px;
+				// height: 280px;
+				width: 494px;
+				height: 305px;			  
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: initial;
+
+				&:before {
+					content: '';
+					position: absolute;
+					height: 100%;
+					top: 20px;
+					left: -7px;
+					right: -7px;
+					border: 7px solid rgba(0, 0, 0, 1);
+					z-index: -1;
+
+				}
+			}
+
+			&-prev, &-next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&-prev {
+				left: 10px;
+			}
+			
+			&-next {
+				right: 10px;
+			}
+ 	
+			&-dots {
+				display: none;
+			}
+	
+			&-stage-outer {
+				padding-top: 100px;			
+				padding-bottom: 100px;
+			}
+	
+			&-item {
+				transition: transform 0.5s ease-out;
+				&.active.scale {
+					transform: scale(1.25);
+					z-index: 1;	
+				}
+			}
+		}
 	}
 }
 

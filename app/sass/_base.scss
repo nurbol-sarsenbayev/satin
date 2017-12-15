@@ -27,6 +27,26 @@ body textarea:required:valid {
 	height: auto;
 }
 
+.text-center {
+	text-align: center;
+}
+
+.arrow {
+	&-left, &-right {
+		display: inline-block;
+		width: 13px;
+		height: 23px;
+	}
+
+	&-left {
+		background: url('/img/arrow-left.png')
+	}
+
+	&-right {
+		background: url('/img/arrow-right.png')
+	}
+}
+
 .button {
     display: inline-block;
     border: none;
