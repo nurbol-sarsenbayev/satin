@@ -185,6 +185,10 @@ body {
 			}
 		}
 	}
+
+	&-reviews {
+		padding-bottom: 80px;
+	}
 }
 
 .list {
@@ -242,6 +246,7 @@ body {
 
 .carousel {
 	&-results {		
+		z-index: 1;
 		.owl {
 			&-nav {
 				position: absolute;
@@ -256,14 +261,14 @@ body {
 				z-index: initial;
 
 				&:before {
-					content: '';
-					position: absolute;
-					height: 100%;
-					top: 20px;
-					left: -7px;
-					right: -7px;
-					border: 7px solid rgba(0, 0, 0, 1);
-					z-index: -1;
+					// content: '';
+					// position: absolute;
+					// height: 100%;
+					// top: 20px;
+					// left: -7px;
+					// right: -7px;
+					// border: 7px solid rgba(0, 0, 0, 1);
+					// z-index: -1;
 
 				}
 			}
@@ -296,6 +301,73 @@ body {
 				&.active.scale {
 					transform: scale(1.25);
 					z-index: 1;	
+				}
+			}
+		}
+	}
+
+	&-reviews {
+		border: 7px solid $accent;
+		padding: 43px 75px;
+		
+		&-item {
+		  
+			&:after {
+				display: block;
+				content: '';
+				clear: both;
+			}
+
+			&-title {
+				margin-bottom: 12px;
+			}
+
+			&-img {
+				width: 315px;
+				margin-right: 60px;
+				float: left;
+			}
+		}
+
+		.owl {
+			&-stage-outer {
+			}
+
+			&-prev, &-next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&-prev {
+				left: 24px;
+			}
+
+			&-next {
+				right: 24px;
+			}
+
+			&-dots {
+				display: block;
+				position: absolute;
+				bottom: -45px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&-dot {
+				display: inline-block;
+				background-color: rgb(64, 64, 64);
+				width: 10px;
+				height: 10px;		
+				margin-right: 10px;
+
+				&.active {
+					background-color: $accent;
+				}
+				
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}

@@ -23,5 +23,14 @@ $(function() {
         }
     });
 
+    $(".carousel-reviews").owlCarousel({
+        items: 1,
+        nav: true,
+        dots: true,
+        loop: true,
+        smartSpeed: 500,
+        navText: ['<i class="arrow-left">', '<i class="arrow-right">']
+    });
+
 });
     
