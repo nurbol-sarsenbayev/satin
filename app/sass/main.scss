@@ -53,6 +53,9 @@ body {
 .section {
 	padding: 25px 0;
 	border: 1px solid #000;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
 
 	&-title {
 		font-size: 23px;
@@ -161,33 +164,65 @@ body {
 					justify-content: center;
 					background-color: rgba(222, 255, 0, 0.8);
 				}
-
-				&-more {
-					position: relative;
-					border: 1px solid #fff;
-					font-size: 10px;
-					height: 24px;
-					line-height: 24px;
-					text-transform: uppercase;
-					color: #fff;
-					padding: 0 40px 0 10px;
-					cursor: pointer;
-
-					img {
-						position: absolute;
-						top: 50%;
-						right: 8px;
-						transform: translateY(-50%);
-						width: 21px;
-						height: 16px;
-					}
-				}
 			}
 		}
 	}
 
 	&-reviews {
 		padding-bottom: 80px;
+	}
+
+	&-doctors {
+		.doctor {
+			&-img {
+				float: left;
+				box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);
+				width: 185px;
+			}
+
+			&-content {
+				margin-left: 205px;
+			}
+
+			&-title {
+				font-size: 23px;
+				font-weight: bold;				
+			}
+
+			&-position {
+				font-size: 20px;
+				font-weight: normal;
+			}
+		}
+	}
+
+	&-question {
+		height: 100vh;
+		
+		.section-content {
+			display: flex;
+			align-items: center;
+			height: 100%;
+		}
+
+		&-content {
+			width: 100%;
+		}
+
+		&-title {
+			font-size: 31.244px;
+			text-transform: uppercase;
+			font-weight: bold;
+			text-shadow: 0px 22px 13px rgba(0, 0, 0, 0.16);	
+			margin-bottom: 10px;
+		}
+
+		&-text {
+			font-size: 20.216px;
+			line-height: 1.2;
+			text-shadow: 0px 22px 13px rgba(0, 0, 0, 0.16);			  
+			margin-bottom: 10px;
+		}
 	}
 }
 

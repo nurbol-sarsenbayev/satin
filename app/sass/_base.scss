@@ -82,7 +82,9 @@ body textarea:required:valid {
 .card {
 	position: relative;
 	padding: 20px 40px;
-
+	background-color: #ffffff;
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);
+	
 	&-title {
 		font-size: 15.41px;
 		font-weight: bold;
@@ -91,6 +93,7 @@ body textarea:required:valid {
 	}
 
 	&.inverse {
+		box-shadow: none;
 		border: 4px solid rgba(64, 64, 64, 0.8);
 		&:before {
 			position: absolute;
@@ -103,6 +106,44 @@ body textarea:required:valid {
 			filter: blur(5px);
 		}
 
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.more {
+	position: relative;
+	display: inline-block;
+	font-family: "Lora", sans-serif;
+	border: 1px solid #fff;
+	height: 24px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 0 40px 0 10px;
+	cursor: pointer;
+
+	font-size: 12px;
+	font-weight: bold;
+  
+	&.inverse {
+		color: rgb(64, 64, 64);
+		border-color: rgb(64, 64, 64);
+	}
+
+	img {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		transform: translateY(-50%);
+		width: 21px;
+		height: 16px;
 	}
 }
 
