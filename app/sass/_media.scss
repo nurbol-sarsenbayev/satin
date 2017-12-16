@@ -5,27 +5,181 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
+	.section {
+		&-main {
+			background-size: cover;
+
+			.card {
+				width: 100%;
+			}
+		}
+
+		&-garants {
+
+			.list-garants {
+				li:nth-child(2n) {
+					margin-left: 150px;
+				}
+			}
+		}
+	}
 }
 	/**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+	.section {
+		&-garants {
 
+			.list-garants {
+				li:nth-child(2n) {
+					margin-left: 0;
+				}
+
+				&-text {
+					width: auto;
+				}
+			}
+		}
+
+		&-services-gallery-item {
+			width: 33.3333333%;
+		}
+
+		&-doctors {
+			.doctor {
+				text-align: center;
+				&-img {
+					margin: 0 auto;
+					float: none;
+					margin-bottom: 20px;
+				}
+
+				&-content {
+					margin-left: 0;
+				}
+			}
+		}
+
+		&-footer-item {
+			margin-bottom: 15px;
+		}
+	}
+
+	.carousel {
+		&-results {
+			.owl-nav {
+				width: 394px;
+				height: 243px;
+			}
+		}
+	}
 }
 	/**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+	.section {
+		&-services-gallery-item {
+			width: 50%;
+		}
+	}
 
+	.carousel {
+		&-reviews-item-img {
+			margin-right: 20px;
+			margin-bottom: 10px;
+		}
+
+		&-results {
+			padding: 40px;
+			.owl-nav {
+				width: 100%;
+				height: 100%
+			}
+
+			.owl-stage-outer {
+				padding: 0;
+			}
+
+			.owl-item.active.scale {
+				transform: scale(1);
+			}
+		}
+	}
 }
 	/**/
 
+@media only screen and (max-width : 650px) {
+	
+	.carousel-reviews {
+		text-align: center;
+
+		&-item-img {
+			float: none;
+			margin: 0 auto 20px;
+		}
+	}
+	
+	.modal {
+		.service {
+			display: block;
+
+			&-image {
+				width: 100%;
+				text-align: center;
+
+				&-title {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.section {
+		&-garants {
 
+			.list-garants {
+				li {
+					margin-bottom: 10px;
+				}
+
+				&-img, &-img-before {
+					transform: scale(0.8);
+					margin-right: 0;
+				}
+			}
+		}
+
+		&-services-gallery-item {
+			width: 100%;
+		}
+	}
+
+	.carousel {
+		&-reviews {
+			padding: 20px;
+			.owl-nav { 
+				display: none;
+			}	
+			.owl-dot:not(:last-child) {
+				margin-right: 5px;
+			}
+		}
+
+		&-results {
+			padding: 0;
+			.owl-nav {
+				display: none;
+			}
+		}
+	}
 }
 	/**/
 

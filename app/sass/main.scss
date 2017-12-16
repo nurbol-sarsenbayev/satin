@@ -10,7 +10,7 @@ html, body {
 body {
 	min-width: 320px;
 	position: relative;
-	line-height: 1.75;
+	line-height: $default_line_height;
 	font-size: $default_font_size;
 	font-family: $default-font;
 	color: $default_text_color;
@@ -31,7 +31,7 @@ body {
 
 		li {
 			display: inline-block;
-			margin-right: 15px;
+			margin-right: 33px;
 
 			a {
 				font-size: 14px;
@@ -56,6 +56,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 
+
 	&-title {
 		font-size: 23px;
 		font-family: "Lora";
@@ -68,14 +69,20 @@ body {
 	}
 
 	&-header {
-		height: 38px;
-		line-height: 38px;
+		min-height: 26px;
+		line-height: 26px;
 		text-align: left;
 	}
 
 	&-main {
 		background-color: #cfcfcf;
 		background-size: contain;
+		background-position: -100px 0;
+
+		.section-title {
+			text-align: left;
+			margin: 28px 0 36px;
+		}
 
 		.header {
 			&-nav {
@@ -87,19 +94,42 @@ body {
 			}
 		}
 
-
+		.card {
+			width: 510px;			
+		}
 
 		&-nav {
 			display: flex;
+			margin-top: 11px;
 
 			.logo {
 				width: 167px;
+
+				img {
+					margin-bottom: 22px;
+				}
+
+				&-text {
+					font-size: 12px;
+				}
 			}
 
 			.contacts {
 				flex-grow: 1;
 				text-align: right;				
+				color: $dark;
+				font-weight: bold;
+				font-size: 14px;
+
+				&-title {
+					margin-bottom: 10px;
+				}
 			}
+		}
+
+		.list-main {
+			font-size: 16.358px;
+			margin-bottom: 50px;
 		}
 	}
 
@@ -180,15 +210,53 @@ body {
 		}
 	}
 
+	&-diagnostic {
+		padding-bottom: 40px;
+
+		.section-content {
+			margin-top: 67px;
+		}
+
+		&-title {
+			margin-bottom: 40px;
+			font-size: 29.406px;
+			font-weight: bold;
+			line-height: 1.2;
+			text-shadow: 0px 22px 13px rgba(0, 0, 0, 0.16);			
+
+			span {
+				display: block;
+				font-size: 25.03px;
+			}
+		}
+
+		&-apparat {
+			font-size: 20px;
+			font-weight: normal;
+			margin-bottom: 14px;
+		}
+
+		&-test {
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: 17px;
+		}
+	}
+
 	&-reviews {
 		padding-bottom: 80px;
 	}
 
 	&-doctors {
+		padding-bottom: 33px;
+
 		.doctor {
+			margin-bottom: 58px;
+
 			&-img {
 				float: left;
-				box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);
+				box-shadow: 0px 20px 15px 0px rgba(0, 0, 0, 0.16);
 				width: 185px;
 			}
 
@@ -198,12 +266,29 @@ body {
 
 			&-title {
 				font-size: 23px;
-				font-weight: bold;				
+				font-weight: bold;	
+				margin-bottom: 22px;			
 			}
 
 			&-position {
 				font-size: 20px;
 				font-weight: normal;
+				margin-bottom: 13px;
+			}
+
+			&-text {
+				font-size: 14px;
+				margin-bottom: 16px;
+			}
+
+			&-content {
+				margin-bottom: 15px;
+			}
+
+			&-bold {
+				font-size: 16px;
+				font-weight: bold;
+				margin-bottom: 8px;
 			}
 		}
 	}
@@ -214,11 +299,15 @@ body {
 		.section-content {
 			display: flex;
 			align-items: center;
-			height: 100%;
+			height: calc(100% - 85px);
 		}
 
 		&-content {
 			width: 100%;
+		}
+
+		&-box {
+			// margin-left: 55px;							
 		}
 
 		&-title {
@@ -236,12 +325,26 @@ body {
 			margin-bottom: 10px;
 		}
 	}
+
+	&-footer {
+		padding: 10px 0;
+		background-color: $dark;
+		color: #ffffff;
+		font-size: 13px;
+
+		&-item {
+			height: 65px;
+		}
+
+		.small {
+			font-family: "Century Gothic";
+			font-size: 10px;
+			margin-bottom: 4px;
+		}
+	}
 }
 
 .list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
 
 	&-garants {
 		display: inline-block;
@@ -255,11 +358,11 @@ body {
 			&:nth-child(2n) {
 				margin-left: 298px;
 			}
+		}
 
-			p {
-				text-align: left;
-				width: 500px;
-			}
+		&-text {
+			text-align: left;
+			width: 500px;
 		}
 
 		&-img {
@@ -271,6 +374,7 @@ body {
 			line-height: 125px;
 			margin-right: 32px;
 			display: flex;
+			flex-shrink: 0;
 
 			img {
 				margin: auto;
@@ -291,20 +395,11 @@ body {
 	}
 
 	&-diagnostic {
-		li {
-			position: relative;
-			padding-left: 23px;
+		margin-bottom: 20px;
 
-			&:before {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-				width: 17px;
-				height: 17px;
-				content: '';
-				background: url('/img/diagnostic-list.png');
-			}
+		li {
+			font-size: 16px;
+			line-height: 1.563;		
 		}
 	}
 }
@@ -312,6 +407,7 @@ body {
 .carousel {
 	&-results {		
 		z-index: 1;
+		margin-bottom: 34px;
 		.owl {
 			&-nav {
 				position: absolute;
@@ -364,7 +460,7 @@ body {
 			&-item {
 				transition: transform 0.5s ease-out;
 				&.active.scale {
-					transform: scale(1.25);
+					transform: scale(1.7);
 					z-index: 1;	
 				}
 			}
@@ -390,6 +486,7 @@ body {
 			&-img {
 				width: 315px;
 				margin-right: 60px;
+				margin-bottom: 40px;
 				float: left;
 			}
 		}
@@ -435,6 +532,47 @@ body {
 					margin-right: 0;
 				}
 			}
+		}
+	}
+}
+
+.modal {
+	.service {
+		display: flex;
+
+		&-image {
+			width: 211px;
+			margin-right: 22px;
+			flex-shrink: 0;
+
+			img {
+				max-width: 100%;
+				margin-bottom: 20px;
+			}			
+
+			&-title {
+				text-align: center;
+			}
+		}
+
+		&-image-title, &-title {
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 1.05;
+			margin-bottom: 7px;
+		}
+
+		&-text {
+			font-size: 14px;
+			margin-bottom: 10px;
+		}
+
+		.bold {
+			margin-bottom: 10px;
+		}
+
+		&-list {
+			margin-bottom: 12px;
 		}
 	}
 }
