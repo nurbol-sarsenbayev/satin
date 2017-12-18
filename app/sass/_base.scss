@@ -47,11 +47,11 @@ body textarea:required:valid {
 	}
 
 	&-left {
-		background: url('/img/arrow-left.png')
+		background: url('../img/arrow-left.png')
 	}
 
 	&-right {
-		background: url('/img/arrow-right.png')
+		background: url('../img/arrow-right.png')
 	}
 }
 
@@ -251,7 +251,7 @@ body textarea:required:valid {
 		right: 10px;
 		width: 16px;
 		height: 16px;
-		background: url('/img/close.png');
+		background: url('../img/close.png');
 	}
 }
 
@@ -278,10 +278,19 @@ body textarea:required:valid {
 				width: 17px;
 				height: 17px;
 				content: '';
-				background: url('/img/diagnostic-list.png');
+				background: url('../img/diagnostic-list.png');
 			}
 		}
 	}
 
+}
+
+.border {
+	border-width: 6px;
+	border-color: $accent;
+	border-style: solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;  
 }
 

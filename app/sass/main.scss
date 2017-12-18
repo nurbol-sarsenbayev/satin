@@ -236,6 +236,21 @@ body {
 			margin-bottom: 14px;
 		}
 
+		.border {
+			&-apparat {
+				width: 327px;
+				max-width: 100%;
+				height: 288px;
+				&-2 {
+					position: relative;
+					width: 376px;
+					max-width: 100%;
+					height: 333px;
+					z-index: 2;
+				}			  
+			}
+		}
+
 		&-test {
 			font-size: 22px;
 			font-weight: bold;
