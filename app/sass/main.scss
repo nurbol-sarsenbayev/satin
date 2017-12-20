@@ -95,7 +95,7 @@ body {
 					text-decoration: none;
 				}
 
-				&:hover {
+				&:hover, &.active {
 					padding: 3px 0;
 					border-bottom: 2px solid $accent;
 				}
@@ -334,7 +334,7 @@ body {
 	}
 
 	&-reviews {
-		padding-bottom: 80px;
+		padding-bottom: 100px;
 	}
 
 	&-doctors {
@@ -607,7 +607,7 @@ body {
 			&-dots {
 				display: block;
 				position: absolute;
-				bottom: -75px;
+				bottom: -60px;
 				left: 50%;
 				transform: translateX(-50%);
 			}

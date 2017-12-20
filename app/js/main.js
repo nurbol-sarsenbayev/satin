@@ -32,6 +32,7 @@ $(function() {
         dots: true,
         loop: true,
         smartSpeed: 500,
+        margin: 30,
         autoplay: true,
         autoplayTimeout: 2000,
         navText: ['<i class="arrow-left">', '<i class="arrow-right">']
@@ -99,6 +100,21 @@ $(function() {
             $top.removeClass('active');
             $header.addClass('ontop');
         }
+
+        var scrollPos = $wnd.scrollTop() + 50;
+
+        $headerMenu.find("a").each(function() {
+            var link = $(this);
+            var id = link.attr('href');
+            var section = $(id);
+            var sectionTop = section.offset().top;
+
+            if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+                link.addClass('active');
+            } else {
+                link.removeClass('active');
+            }
+        });
     }
 
     onscroll();
