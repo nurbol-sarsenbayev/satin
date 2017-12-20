@@ -3,7 +3,7 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1199px) {
 
 	.section {
 		&-main {
@@ -26,9 +26,8 @@
 }
 	/**/
 
-
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 991px) {
 	.section {
 		&-garants {
 
@@ -62,6 +61,14 @@
 			}
 		}
 
+		&-diagnostic {
+			.border-apparat {
+				&, &-2 {
+					margin-top: 20px;
+				}
+			}
+		}
+
 		&-footer-item {
 			margin-bottom: 15px;
 		}
@@ -72,18 +79,54 @@
 			.owl-nav {
 				width: 394px;
 				height: 243px;
+				margin-left: -197px;
+				margin-top: -121.5px;
 			}
+		}
+	}
+
+	.thanks {
+		padding: 15px;
+
+		&-content {
+			margin-left: 0;
+			margin: auto;
 		}
 	}
 }
 	/**/
 
-
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 767px) {
 	.section {
 		&-services-gallery-item {
 			width: 50%;
+		}
+
+		&-header {
+			&.ontop {
+				top: 18px;
+			}
+
+			.header-nav {
+				align-items: center;
+				padding: 3px 0;
+				text-align: left;
+			}
+
+			.header-menu {
+				position: absolute;
+				top: 100%;
+				left: 15px;
+				right: 15px;
+				background: rgba(255,255, 255, 0.8);
+				display: none;
+				li {
+					display: block;
+					margin: 0 0 0 15px;
+
+				}
+			}
 		}
 	}
 
@@ -97,7 +140,11 @@
 			padding: 40px;
 			.owl-nav {
 				width: 100%;
-				height: 100%
+				height: 100%;
+				top: 0;
+				left: 0;
+				margin-left: 0;
+				margin-top: 0;
 			}
 
 			.owl-stage-outer {
@@ -114,6 +161,12 @@
 
 @media only screen and (max-width : 650px) {
 	
+	.section-diagnostic .border-apparat-2 {
+		img {
+			width: 100%;
+		}
+	}
+
 	.carousel-reviews {
 		text-align: center;
 
@@ -141,7 +194,7 @@
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 379px) {
 	.section {
 		&-garants {
 
@@ -183,9 +236,8 @@
 }
 	/**/
 
-
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 319px) {
 
 }
 	/**/

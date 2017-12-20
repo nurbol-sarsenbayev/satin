@@ -5,11 +5,14 @@ $(function() {
         nav: true,
         loop: true,
         smartSpeed: 500,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        navContainerClass: 'owl-nav border',
         responsive: {
             0: { items: 1 },
-            481: { items: 2, margin: 30 },
-            769: { items: 3, margin: 130 },
-            993: { margin: 180 }          
+            480: { items: 2, margin: 30 },
+            768: { items: 3, margin: 130 },
+            992: { margin: 180 }          
         },
         navText: ['<i class="arrow-left">', '<i class="arrow-right">'],        
         onChanged: function(e) {
@@ -29,6 +32,8 @@ $(function() {
         dots: true,
         loop: true,
         smartSpeed: 500,
+        autoplay: true,
+        autoplayTimeout: 2000,
         navText: ['<i class="arrow-left">', '<i class="arrow-right">']
     });
 
@@ -36,17 +41,86 @@ $(function() {
         $(this).fadeOut(500);        
     });
 
+    $(".modal-content").click(function(e) {
+        e.stopPropagation();
+    });
+
     $(".modal-close").click(function() {
         $(this).closest('.modal').fadeOut(500);
     });
 
-    $(".section-services-gallery-item .more").click(function() {
-        var id = $(this).data("id");
-
-        $("#modal-service-" + id).fadeIn(500);
+    $(".thanks-close").click(function() {
+        $(".thanks").fadeOut(500);
+        $form.find("input[type=text], textarea").val("");
+        $formQuestion.find("input[type=text], textarea").val("");
     });
 
+    var $form = $(".form");
+    var $formQuestion = $(".form-question");
+    var $modalQuestion = $("#modal-question");
+
+    $form.submit(function(e) {
+        openThanks();
+        $(".modal").hide();
+        e.preventDefault();
+    });
+
+    $formQuestion.submit(function(e) {
+        e.preventDefault();
+        $modalQuestion.fadeIn(500);
+        $modalQuestion.find(".phone").val($formQuestion.find(".phone").val());
+    });
+
+    $(".phone").mask("+7 (999) 999 99 99");
+
+    var openThanks = function() {
+        $(".thanks").css("display", "flex").hide().fadeIn(500);
+    }
+
+    $(".modal-open").click(function() {
+        var id = $(this).data("id");
+        $("#" + id).fadeIn(500);
+    });
+
+    var $wnd = $(window);
+    var $top = $(".page-top");
     var $html = $("html, body");
+    var $header = $(".section-header");
+    var $headerMenu = $(".header-menu");
+    var $loader = $(".preloader");
+
+    $wnd.scroll(function() { onscroll(); });
+
+    var onscroll = function() {
+        if($wnd.scrollTop() > $wnd.height()) {
+            $top.addClass('active');
+            $header.removeClass('ontop');
+        } else {
+            $top.removeClass('active');
+            $header.addClass('ontop');
+        }
+    }
+
+    onscroll();
+
+    $top.click(function() {
+        $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
+    });
+
+    $wnd.on('load', function() {
+        $loader.delay(0).fadeOut('slow');
+    });
+
+    $(".hamburger").click(function() {
+        $this = $(this);
+        $this.toggleClass("is-active");
+        if($this.hasClass("is-active")) {
+            $headerMenu.slideDown('700');
+        } else {
+            $headerMenu.slideUp('700');
+        }
+        return false;
+    });    
 
     $(".header-menu a").click(function(e) {
         e.preventDefault();

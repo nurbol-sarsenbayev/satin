@@ -2,6 +2,7 @@
 @import "../libs/font-awesome/font-awesome.min";
 @import "../libs/owl.carousel/owl.carousel";
 @import "../libs/owl.carousel/owl.theme.default";
+@import "../libs/css-hamburgers/hamburgers.min";
 
 @font-face {
     font-family: 'FontAwesome';
@@ -11,4 +12,34 @@
          url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.7.0') format('woff'), 
          url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
          url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+}
+
+.hamburger {
+    background-color: #ffffff;
+    padding: 10px;
+    line-height: 0;
+    
+    &-box {
+        width: 30px;
+    }
+
+    &-inner {
+        &, &:after, &:before {            
+            border-radius: 0;
+            width: 100%;
+            height: 2px;        
+        }
+
+        & {
+            margin-top: -1px;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: -7px;
+        }
+    }
 }

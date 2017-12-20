@@ -29,10 +29,15 @@ gulp.task('main-js', function() {
 gulp.task('libs-js', function() {
     return gulp.src([
         'app/libs/jquery/jquery.js',
-        'app/libs/owl.carousel/owl.carousel.js'
+        'app/libs/owl.carousel/owl.carousel.js',
+        'app/libs/jquery.maskedinput/jquery.maskedinput.js',
+        // 'app/libs/jquery-validation/jquery.validate.js'
     ])
     .pipe(concat('libs.min.js'))
-    .pipe(uglify()) // Минимизировать весь js (на выбор)
+    .pipe(uglify().on('error', function(err) {
+        gutil.log(gutil.colors.red('[Error]'), err.toString());
+        this.emit('end'); // выводить ошибки
+    })) // Минимизировать весь js (на выбор)
     .pipe(gulp.dest('app/js'));
 });
 

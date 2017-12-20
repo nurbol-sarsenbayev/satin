@@ -11,14 +11,15 @@
 	padding: 0;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, p {
 	line-height: 1.2;
 }
 
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	color: #666;
+	border-color: red;
+	//color: #666;
 }
 body input:required:valid,
 body textarea:required:valid {
@@ -184,7 +185,7 @@ body textarea:required:valid {
 	}
 }
 
-.input {
+.input, .textarea {
 	font-size: 15.41px;
 	font-family: "Lora";
 	color: rgb(0, 0, 0);
@@ -192,6 +193,12 @@ body textarea:required:valid {
 	padding: 0px 10px;
 	height: 26px;
 	width: 100%;
+}
+
+.textarea {
+	height: 85px;
+	resize: vertical;
+	overflow: auto;
 }
 
 *::-webkit-input-placeholder {
@@ -244,6 +251,14 @@ body textarea:required:valid {
 		padding: 36px;	  
 	}
 
+	&-title {
+		font-size: 13px;
+		line-height: 1.2;
+		text-align: center;
+		font-weight: normal;	
+		margin-bottom: 11px;  
+	}
+
 	&-close {
 		position: absolute;
 		cursor: pointer;
@@ -252,6 +267,29 @@ body textarea:required:valid {
 		width: 16px;
 		height: 16px;
 		background: url('../img/close.png');
+		
+		&.small {
+			width: 9px;
+			height: 9px;
+			background: url('../img/close-small.png');
+		}
+	}
+}
+
+
+.modal {
+	&-notice {
+		.modal-content {
+			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);
+			width: 236px;
+			padding: 25px 18px 20px;
+			border: none;	
+
+			.input, .button, .textarea {
+				margin-bottom: 7px;
+				width: 100%;
+			}
+		}
 	}
 }
 
@@ -285,12 +323,37 @@ body textarea:required:valid {
 
 }
 
-.border {
-	border-width: 6px;
-	border-color: $accent;
-	border-style: solid;
-	display: flex;
-	align-items: center;
-	justify-content: center;  
+@mixin border($borderWidth) {
+	position: relative;
+	box-sizing: border-box;
+	z-index: auto;
+	border: $borderWidth solid $accent;
+	
+	&:before {
+		position: absolute;
+		z-index: -1;
+		top: 15px;
+		left: -$borderWidth;
+		right: -$borderWidth;
+		bottom: -(15 + 2*$borderWidth);
+		content: '';
+		filter: blur(5px);
+		border: $borderWidth solid rgba(0,0,0,0.3);
+	}
 }
 
+.border {
+	@include border(7px);
+}
+
+.divider-h {
+	flex-grow: 1;
+}
+
+@mixin circle($width) {
+	width: $width;
+	height: $width;
+	line-height: $width;	
+	text-align: center;
+	border-radius: 50%;
+}

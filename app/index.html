@@ -32,22 +32,35 @@
 
 	<div class="page-wrapper">
 
-		<section class="section section-main" id="main" style="background-image:url('./img/section-main.png')">
-			<header class="section-header">
-				<div class="container">
-					<nav class="header-nav">
-						<ul class="header-menu">
-							<li><a href="#main">главная</a></li>
-							<li><a href="#results">наши работы</a></li>
-							<li><a href="#services">услуги</a></li>
-							<li><a href="#doctors">врачи</a></li>
-							<li><a href="#reviews">отзывы</a></li>
-						</ul>
-						<button class="button">Заказать звонок</button>
-					</nav>
-				</div>
-			</header>
+		<div class="page-top"><i class="fa fa-angle-double-up"></i></div>
+		<div class="preloader"><i class="fa fa-spinner fa-pulse fa-3x"></i></div>
+		
+		<header class="section-header ontop">
+			<div class="container">
+				<nav class="header-nav">
+					<a href="#" class="hamburger hamburger--elastic hamburger--accessible visible-xs">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</a>
 
+					<div class="divider-h visible-xs"></div>
+
+					<ul class="header-menu">
+						<li><a href="#main">главная</a></li>
+						<li><a href="#results">наши работы</a></li>
+						<li><a href="#services">услуги</a></li>
+						<li><a href="#doctors">врачи</a></li>
+						<li><a href="#reviews">отзывы</a></li>
+						<li class="visible-xs">+7 (727) 273 92 97</li>
+						<li class="visible-xs">+7 (701) 335 33 95</li>
+					</ul>
+					<button class="button modal-open" data-id="modal-request">Заказать звонок</button>
+				</nav>
+			</div>
+		</header>
+
+		<section class="section section-main" id="main" style="background-image:url('./img/section-main.png')">			
 			<div class="container">
 				<div class="section-main-nav">
 					<div class="logo">
@@ -55,7 +68,7 @@
 						<div class="logo-text">Косметологические услуги в Алматы</div>
 					</div>
 
-					<div class="contacts">
+					<div class="contacts hidden-xs">
 						<div class="contacts-title">Наши контакты</div>
 						<div class="phone">+7 (727) 273 92 97</div>
 						<div class="phone">+7 (701) 335 33 95</div>
@@ -63,7 +76,7 @@
 				</div>
 
 				<div class="row">
-					<div class="col-md-7 col-md-offset-5 col-sm-8 col-sm-offset-4">
+					<div class="col-lg-7 col-lg-offset-5 col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
 						<div class="section-content">
 							<h2 class="section-title">Ухоженное лицо с помощью эстетической медицины без хирургического вмешательства уже сегодня!</h2>
 							<ul class="list list-main">
@@ -75,18 +88,20 @@
 							<div class="card">
 								<p>Закажите услугу и получите <strong>БЕСПЛАТНУЮ</strong> диагностику лица стоимостью 10 000 тг на аппарате <strong>"Skintester Italia"!</strong></p>
 								<div class="row">
-									<div class="col-sm-6">
-										<input class="input" type="text" placeholder="Введите имя">
-									</div>
-									<div class="col-sm-6">
-										<input class="input" type="email" placeholder="Введите E-mail">
-									</div>
-									<div class="col-sm-6">
-										<input class="input" type="text" placeholder="Введите телефон">										
-									</div>
-									<div class="col-sm-6">
-										<button class="button">Заказать услугу</button>										
-									</div>
+									<form class="form">
+										<div class="col-sm-6">
+											<input class="input" type="text" placeholder="Введите имя">
+										</div>
+										<div class="col-sm-6">
+											<input class="input" type="email" placeholder="Введите E-mail">
+										</div>
+										<div class="col-sm-6">
+											<input class="input phone" type="text" placeholder="Введите телефон*" required>										
+										</div>
+										<div class="col-sm-6">
+											<input type="submit" class="button" value="Заказать услугу">
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>					
@@ -97,7 +112,7 @@
 		</section>
 
 		<section class="section section-garants">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -110,7 +125,7 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="container">
 				<div class="section-content">
@@ -169,7 +184,7 @@
 		</section>
 
 		<section class="section section-results" id="results">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -182,7 +197,7 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="container">
 				<div class="row">
@@ -226,7 +241,7 @@
 		</section>
 
 		<section class="section section-services" id="services">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -239,7 +254,7 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="container">
 				<div class="row">
@@ -254,106 +269,98 @@
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-1.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="1">
+											<div class="more modal-open" data-id="modal-service-1">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-1.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Ботокс/Диспорт</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-2.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="2">
+											<div class="more modal-open" data-id="modal-service-2">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-2.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Биоревитализация</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-3.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="3">
+											<div class="more modal-open" data-id="modal-service-3">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-3.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Гиалуаль</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-4.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="4">
+											<div class="more modal-open" data-id="modal-service-4">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-4.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Плазмолифтинг</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-5.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="5">
+											<div class="more modal-open" data-id="modal-service-5">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-5.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Пилинги</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-6.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="6">
+											<div class="more modal-open" data-id="modal-service-6">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-6.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Мезотерапия лица</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-7.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="7">
+											<div class="more modal-open" data-id="modal-service-7">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-7.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Мезотерапия тела</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 								<div class="section-services-gallery-item">
 									<div class="section-services-gallery-item-img" style="background-image: url('./img/service-8.jpg');">
 										<div class="section-services-gallery-item-cover">
-											<div class="more" data-id="8">
+											<div class="more modal-open" data-id="modal-service-8">
 												Подробнее
 												<img src="./img/arrow.png" alt="">												
 											</div>
 										</div>
-										<!-- <img class="img-responsive" src="./img/service-8.jpg" alt=""> -->
 									</div>
 									<h3 class="section-services-gallery-item-title">Мезотерапия для волос</h3>
-									<button class="button">Узнать цену</button>
+									<button class="button modal-open" data-id="modal-request">Узнать цену</button>
 								</div>
 
 							</div>
@@ -361,18 +368,20 @@
 							<div class="card inverse">
 								<div class="card-title">Получите бесплатную консультацию косметолога уже сегодня!</div>
 								<div class="row">
-									<div class="col-sm-6 col-md-3">
-										<input class="input" type="text" placeholder="Введите имя">
-									</div>
-									<div class="col-sm-6 col-md-3">
-										<input class="input" type="email" placeholder="Введите E-mail">
-									</div>
-									<div class="col-sm-6 col-md-3">
-										<input class="input" type="text" placeholder="Введите телефон">
-									</div>
-									<div class="col-sm-6 col-md-3">
-										<button class="button">Консультация</button>
-									</div>
+									<form class="form">
+										<div class="col-sm-6 col-md-3">
+											<input class="input" type="text" placeholder="Введите имя">
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<input class="input" type="email" placeholder="Введите E-mail">
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<input class="input phone" type="text" placeholder="Введите телефон*" required>
+										</div>
+										<div class="col-sm-6 col-md-3">
+											<input type="submit" class="button" value="Консультация">
+										</div>			
+									</form>
 								</div>
 							</div>
 						</div>			
@@ -385,7 +394,7 @@
 		</section>
 
 		<section class="section section-diagnostic">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -398,7 +407,7 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="section-content">
 				<div class="container">
@@ -418,8 +427,10 @@
 						</div>
 					</div>
 
+					<div class="apparat-divider"></div>
+
 					<div class="row">
-						<div class="col-lg-5 col-md-4 col-md-push-8">
+						<div class="col-md-5 col-md-push-7">
 							<h4 class="section-diagnostic-test">16 особенных тестов</h4>
 							<ul class="list list-check list-diagnostic">
 								<li>количество жидкости</li>
@@ -438,12 +449,12 @@
 								<li>пигментные пятна</li>
 								<li>фототип.</li>
 							</ul>
-							<button class="button">Диагностика</button>
+							<button class="button modal-open" data-id="modal-diagnostic">Диагностика</button>
 						</div>
 
-						<div class="col-lg-7 col-md-8 col-md-pull-4">
+						<div class="col-md-7 col-md-pull-5">
 							<div class="border border-apparat-2">
-								<img src="./img/apparat-2.jpg" style="width: 100%" alt="">
+								<img src="./img/apparat-2.jpg" alt="" style="display: block;">
 							</div>
 						</div>	
 					</div>
@@ -453,7 +464,7 @@
 		</section>
 
 		<section class="section section-doctors" id="doctors" style="background-image: url('./img/section-doctors.jpg')">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -466,61 +477,61 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="container">
 				<div class="section-content">
 					<h2 class="section-title">Наши высококвалифицированные врачи-специалисты:</h2>
 
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-6">
-								<div class="doctor">
-									<div class="doctor-img">
-										<img src="./img/doctor.jpg" alt="" class="img-responsive">
-									</div>
-									<div class="doctor-content">
-										<h4 class="doctor-title">Доронкина Оксана Леонидовна</h4>
-										<h5 class="doctor-position">врач-дерматокосметолог</h5>
-										<p class="doctor-text">Доронкина Оксана Леонидовна- врач-дерматокосметолог. Стаж работы по специальности  - более 12 лет. Полностью владеет всеми необходимыми техниками и методиками безоперационного омоложения (инъекции "диспорт", мезотерапия, биоревитализация, контурная пластика, все виды пилингов, плазмолифтинг, микродермабразия), </p>
-
-										<div class="more inverse">
-											Подробнее
-											<img src="./img/arrow-inverse.png" alt="">												
-										</div>
-									</div>
-									<div class="clear"></div>
-									<p class="doctor-bold">Лицензии и сертификаты специалиста</p>
-									<button class="button">Посмотреть</button>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="doctor">
+								<div class="doctor-img">
+									<img src="./img/doctor.jpg" alt="" class="img-responsive">
 								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="doctor">
-									<div class="doctor-img">
-										<img src="./img/doctor.jpg" alt="" class="img-responsive">
-									</div>
-									<div class="doctor-content">
-										<h4 class="doctor-title">Доронкина Оксана Леонидовна</h4>
-										<h5 class="doctor-position">врач-дерматокосметолог</h5>
-										<p class="doctor-text">Доронкина Оксана Леонидовна- врач-дерматокосметолог. Стаж работы по специальности  - более 12 лет. Полностью владеет всеми необходимыми техниками и методиками безоперационного омоложения (инъекции "диспорт", мезотерапия, биоревитализация, контурная пластика, все виды пилингов, плазмолифтинг, микродермабразия), </p>
+								<div class="doctor-content">
+									<h4 class="doctor-title">Доронкина Оксана Леонидовна</h4>
+									<h5 class="doctor-position">врач-дерматокосметолог</h5>
+									<p class="doctor-text">Доронкина Оксана Леонидовна- врач-дерматокосметолог. Стаж работы по специальности  - более 12 лет. Полностью владеет всеми необходимыми техниками и методиками безоперационного омоложения (инъекции "диспорт", мезотерапия, биоревитализация, контурная пластика, все виды пилингов, плазмолифтинг, микродермабразия), </p>
 
-										<div class="more inverse">
-											Подробнее
-											<img src="./img/arrow-inverse.png" alt="">												
-										</div>
+									<div class="more inverse">
+										Подробнее
+										<img src="./img/arrow-inverse.png" alt="">												
 									</div>
-									<div class="clear"></div>
-									<p class="doctor-bold">Лицензии и сертификаты специалиста</p>
-									<button class="button">Посмотреть</button>
 								</div>
+								<div class="clear"></div>
+								<p class="doctor-bold">Лицензии и сертификаты специалиста</p>
+								<button class="button">Посмотреть</button>
 							</div>
 						</div>
+						<div class="col-sm-6">
+							<div class="doctor">
+								<div class="doctor-img">
+									<img src="./img/doctor.jpg" alt="" class="img-responsive">
+								</div>
+								<div class="doctor-content">
+									<h4 class="doctor-title">Доронкина Оксана Леонидовна</h4>
+									<h5 class="doctor-position">врач-дерматокосметолог</h5>
+									<p class="doctor-text">Доронкина Оксана Леонидовна- врач-дерматокосметолог. Стаж работы по специальности  - более 12 лет. Полностью владеет всеми необходимыми техниками и методиками безоперационного омоложения (инъекции "диспорт", мезотерапия, биоревитализация, контурная пластика, все виды пилингов, плазмолифтинг, микродермабразия), </p>
 
-						<div class="row">
-							<div class="col-lg-10 col-lg-offset-1">
-								<div class="card">
-									<div class="card-title">Записаться на прием к специалисту</div>
-									<div class="row">
+									<div class="more inverse">
+										Подробнее
+										<img src="./img/arrow-inverse.png" alt="">												
+									</div>
+								</div>
+								<div class="clear"></div>
+								<p class="doctor-bold">Лицензии и сертификаты специалиста</p>
+								<button class="button">Посмотреть</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-10 col-lg-offset-1">
+							<div class="card">
+								<div class="card-title">Записаться на прием к специалисту</div>
+								<div class="row">
+									<form class="form">
 										<div class="col-sm-6 col-md-3">
 											<input class="input" type="text" placeholder="Введите имя">
 										</div>
@@ -528,12 +539,12 @@
 											<input class="input" type="email" placeholder="Введите E-mail">
 										</div>
 										<div class="col-sm-6 col-md-3">
-											<input class="input" type="text" placeholder="Введите телефон">
+											<input class="input phone" type="text" placeholder="Введите телефон*" required>
 										</div>
 										<div class="col-sm-6 col-md-3">
-											<button class="button">Записаться</button>
+											<input type="submit" class="button" value="Записаться">
 										</div>
-									</div>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -544,7 +555,7 @@
 		</section>
 
 		<section class="section section-reviews" id="reviews">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -557,13 +568,13 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="container">
 				<div class="section-content">
 					<h2 class="section-title">Отзывы наших клиентов</h2>
 
-					<div class="owl-carousel carousel-reviews">
+					<div class="owl-carousel carousel-reviews border">
 						<div class="carousel-reviews-item">
 							<div class="carousel-reviews-item-img">
 								<img src="./img/review-1.jpg" alt="" class="img-responsive">
@@ -598,7 +609,7 @@
 		</section>
 
 		<section class="section section-question" style="background-image: url('./img/section-question.jpg')">
-			<header class="section-header">
+			<!-- <header class="section-header">
 				<div class="container">
 					<nav class="header-nav">
 						<ul class="header-menu">
@@ -611,7 +622,7 @@
 						<button class="button">Заказать звонок</button>
 					</nav>
 				</div>
-			</header>
+			</header> -->
 
 			<div class="section-content">
 
@@ -624,14 +635,16 @@
 									<p class="section-question-text">Задайте их специалистам прямо сейчас</p>
 	
 									<div class="card">
-										<div class="row">
-											<div class="col-sm-6"><input class="input" type="text" placeholder="Введите имя"></div>
-											<div class="col-sm-6"><input class="input" type="email" placeholder="Введите E-mail"></div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6"><input class="input" type="text" placeholder="Введите телефон"></div>
-											<div class="col-sm-6"><button class="button">Задать</button></div>
-										</div>
+										<form class="form-question">
+											<div class="row">
+												<div class="col-sm-6"><input class="input" type="text" placeholder="Введите имя"></div>
+												<div class="col-sm-6"><input class="input" type="email" placeholder="Введите E-mail"></div>
+											</div>
+											<div class="row">
+												<div class="col-sm-6"><input class="input phone" type="text" placeholder="Введите телефон*" required></div>
+												<div class="col-sm-6"><input type="submit" class="button" value="Задать"></div>
+											</div>			
+										</form>
 									</div>		
 								</div>
 							</div>
@@ -725,18 +738,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -775,18 +790,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -821,18 +838,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -871,18 +890,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -919,18 +940,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -969,18 +992,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -1015,18 +1040,20 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
 		</div>
@@ -1062,20 +1089,76 @@
 			<div class="card no-shadow">
 				<div class="card-title">Записаться на прием</div>
 				<div class="row">
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите имя">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="email" placeholder="Введите E-mail">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<input class="input" type="text" placeholder="Введите телефон">
-					</div>
-					<div class="col-sm-6 col-md-3">
-						<button class="button">Записаться</button>
-					</div>
+					<form class="form">
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="text" placeholder="Введите имя">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input" type="email" placeholder="Введите E-mail">
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input class="input phone" type="text" placeholder="Введите телефон*" required>
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<input type="submit" class="button" value="Записаться">
+						</div>			
+					</form>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="modal modal-notice" id="modal-diagnostic">
+		<div class="modal-content">
+			<i class="modal-close small"></i>
+			<h5 class="modal-title">Диагностика кожи при  помощи аппарата  "Skintester"</h5>
+			<form class="form">
+				<input class="input" type="text" placeholder="Введите имя">
+				<input class="input phone" type="text" placeholder="Введите телефон*" required>
+				<input class="input" type="email" placeholder="Введите E-mail">
+				<input type="submit" class="button" value="Диагностика">				
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal-notice" id="modal-request">
+		<div class="modal-content">
+			<i class="modal-close small"></i>
+			<h5 class="modal-title">Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время</h5>
+			<form class="form">
+				<input class="input" type="text" placeholder="Введите имя">
+				<input class="input phone" type="text" placeholder="Введите телефон*" required>
+				<input class="input" type="email" placeholder="Введите E-mail">
+				<input type="submit" class="button" value="Оставить заявку">		
+			</form>
+		</div>
+	</div>
+
+	<div class="modal modal-notice" id="modal-question">
+		<div class="modal-content">
+			<i class="modal-close small"></i>
+			<h5 class="modal-title">Задайте вопрос, и мы свяжемся с Вами в ближайшее время</h5>
+			<form class="form">
+				<input class="input" type="text" placeholder="Введите имя">
+				<input class="input phone" type="text" placeholder="Введите телефон*" required>
+				<input class="input" type="email" placeholder="Введите E-mail">
+				<textarea class="textarea" placeholder="Ваш вопрос"></textarea>
+				<input type="submit" class="button" value="Задать вопрос">				
+			</form>
+		</div>
+	</div>
+
+	<div class="thanks" style="background-image: url('./img/thanks.png')">
+		<div class="thanks-content">
+			<h3 class="thanks-title">Спасибо за оказанное доверие!</h3>
+			<h4 class="thanks-subtitle">Мы свяжемся с Вами в течение 10 минут!</h4>
+			<div class="thanks-text">
+				<p>Если у Вас есть срочный вопрос,<br> 
+					звоните нам по телефону: <br>
+					<strong>+7 (701) 335 - 33 - 95</strong>
+				</p>	
+			</div>
+			<button class="button thanks-close">Вернуться на сайт</button>
 		</div>
 	</div>
 
