@@ -127,9 +127,9 @@ $(function() {
         $(this).prev(".doctor-text").toggleClass('short');
     })
 
-    // $wnd.on('load', function() {
-    //     $loader.delay(0).fadeOut('slow');
-    // });
+    $wnd.on('load', function() {
+        $loader.delay(0).fadeOut('slow');
+    });
 
     $(".hamburger").click(function() {
         $this = $(this);
