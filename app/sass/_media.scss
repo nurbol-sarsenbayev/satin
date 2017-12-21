@@ -105,8 +105,10 @@
 
 		&-header {
 			&.ontop {
-				top: 18px;
+				top: 0;
 			}
+
+			background-color: rgba(#b6b6b6, 0.8);
 
 			.header-nav {
 				align-items: center;
@@ -117,9 +119,10 @@
 			.header-menu {
 				position: absolute;
 				top: 100%;
-				left: 15px;
-				right: 15px;
-				background: rgba(255,255, 255, 0.8);
+				left: 0;
+				right: 0;
+				background-color: rgba(#b6b6b6, 0.8);
+				// background: rgba(255,255, 255, 0.8);
 				display: none;
 				li {
 					display: block;

@@ -57,8 +57,8 @@ $(function() {
     });
 
     var $form = $(".form");
-    var $formQuestion = $(".form-question");
-    var $modalQuestion = $("#modal-question");
+    // var $formQuestion = $(".form-question");
+    // var $modalQuestion = $("#modal-question");
 
     $form.submit(function(e) {
         openThanks();
@@ -66,13 +66,13 @@ $(function() {
         e.preventDefault();
     });
 
-    $formQuestion.submit(function(e) {
-        e.preventDefault();
-        $modalQuestion.fadeIn(500);
-        $modalQuestion.find(".phone").val($formQuestion.find(".phone").val());
-    });
+    // $formQuestion.submit(function(e) {
+    //     e.preventDefault();
+    //     $modalQuestion.fadeIn(500);
+    //     $modalQuestion.find(".phone").val($formQuestion.find(".phone").val());
+    // });
 
-    $(".phone").mask("+7 (999) 999 99 99");
+    // $(".phone").mask("+7 (999) 999 99 99");
 
     var openThanks = function() {
         $(".thanks").css("display", "flex").hide().fadeIn(500);
@@ -123,9 +123,13 @@ $(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
     });
 
-    $wnd.on('load', function() {
-        $loader.delay(0).fadeOut('slow');
-    });
+    $(".doctor .more").click(function() {
+        $(this).prev(".doctor-text").toggleClass('short');
+    })
+
+    // $wnd.on('load', function() {
+    //     $loader.delay(0).fadeOut('slow');
+    // });
 
     $(".hamburger").click(function() {
         $this = $(this);

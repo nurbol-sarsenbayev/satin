@@ -19,6 +19,7 @@ body {
 }
 
 .preloader {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -127,15 +128,17 @@ body {
 	&-header {
 		position: fixed;
 		z-index: 99;
-		top: 18px;
+		// top: 0px;
 		left: 0;
 		right: 0;
 		min-height: 26px;
+		padding: 10px 0;
 		line-height: 26px;
 		text-align: left;
+		background-color: rgba(#b6b6b6, 0.3);
 
 		&.ontop {
-			top: 40px;
+			top: 30px;
 		}
 	}
 
@@ -248,6 +251,7 @@ body {
 					text-transform: uppercase;
 					line-height: 1.2;				  
 					margin-bottom: 17px;
+					white-space: nowrap;
 				}
 
 				&-cover {
@@ -368,6 +372,12 @@ body {
 			&-text {
 				font-size: 14px;
 				margin-bottom: 16px;
+
+				&.short {
+					max-height: 185px;
+					overflow: hidden;
+					text-overflow: ellipsis;	
+				}
 			}
 
 			&-content {
