@@ -278,6 +278,13 @@ body textarea:required:valid {
 
 
 .modal {
+	&-certificate {
+		.modal-content {
+			width: 95%;
+			height: 385.6px;
+		}
+	}
+
 	&-notice {
 		.modal-content {
 			box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.16);

@@ -36,7 +36,58 @@ $(function() {
         autoplay: true,
         autoplayTimeout: 2000,
         navText: ['<i class="arrow-left">', '<i class="arrow-right">']
+    });0
+
+    $(".carousel-certificate-mini").owlCarousel({
+        nav: true,
+        dots: true,
+        loop: true,
+        smartSpeed: 500,
+        margin: 30,
+        autoplay: false,
+        autoHeight: true,
+        autoplayTimeout: 2000,
+        navText: ['<i class="arrow-left">', '<i class="arrow-right">'],
+        responsive: {
+            0: { items: 1 },
+            480: { items: 2 },
+            768: { items: 3 },
+            992: { items: 4 },
+            1200: { items: 5 }          
+        },
+        onChanged: function(event) {
+            $(".carousel-certificate-mini .owl-item").click(function(e) {
+                e.preventDefault();
+                var carousel = $(this).closest('.owl-carousel').data('owl.carousel');
+                var index = carousel.relative($(this).index());
+
+                var id = $(this).closest('.carousel-certificate-mini').data('id');
+                $("#" + id).fadeIn(500, function() {
+                    var carousel2 = $(this).find('.owl-carousel').data('owl.carousel');
+                    carousel2.to(index, 500);
+                });
+            });        
+        }
     });
+
+    $(".carousel-certificate").owlCarousel({
+        items: 1,
+        nav: true,
+        dots: true,
+        loop: true,
+        smartSpeed: 500,
+        margin: 30,
+        autoHeight: true,
+        autoplayTimeout: 2000,
+        navText: ['<i class="arrow-left">', '<i class="arrow-right">']
+    });
+
+
+    // $(".carousel-certificate img").click(function() {
+    //     var el = $(this).closest('.carousel-certificate');
+    //     el.fadeOut(500);
+    // });
+
 
     $(".modal").click(function() {
         $(this).fadeOut(500);        
@@ -57,20 +108,12 @@ $(function() {
     });
 
     var $form = $(".form");
-    // var $formQuestion = $(".form-question");
-    // var $modalQuestion = $("#modal-question");
 
     $form.submit(function(e) {
         openThanks();
         $(".modal").hide();
         e.preventDefault();
     });
-
-    // $formQuestion.submit(function(e) {
-    //     e.preventDefault();
-    //     $modalQuestion.fadeIn(500);
-    //     $modalQuestion.find(".phone").val($formQuestion.find(".phone").val());
-    // });
 
     // $(".phone").mask("+7 (999) 999 99 99");
 
@@ -127,10 +170,6 @@ $(function() {
         $(this).prev(".doctor-text").toggleClass('short');
     })
 
-    $wnd.on('load', function() {
-        $loader.delay(0).fadeOut('slow');
-    });
-
     $(".hamburger").click(function() {
         $this = $(this);
         $this.toggleClass("is-active");
@@ -150,6 +189,11 @@ $(function() {
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
         }
     });
+
+    // $(document).on('load', function() {
+        $loader.delay(0).fadeOut('slow');
+    // });
+
 
 });
     

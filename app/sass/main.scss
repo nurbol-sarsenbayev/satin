@@ -629,6 +629,80 @@ body {
 			}
 		}
 	}
+
+	&-certificate {
+		&, &-mini {
+			position: relative;		
+
+			.owl {
+				&-item {
+					position: relative;
+					// height: 278px;
+					// border: 1px solid #ccc;
+					cursor: pointer;
+
+					&:after {
+						display: none;
+						font-family: 'fontawesome';
+						// content: "\f010";
+						font-size: 25px;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+					}	
+
+					&:hover {
+						&:after {
+							display: block;
+						}
+					}
+				}
+
+				&-prev, &-next {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&-prev {
+					left: -24px;
+				}
+
+				&-next {
+					right: -24px;
+				}
+
+				&-dots {
+					display: block;
+					margin-top: 10px;
+					text-align: center;
+				}
+
+				&-dot {
+					display: inline-block;
+					background-color: rgb(64, 64, 64);
+					width: 10px;
+					height: 10px;		
+					margin-right: 10px;
+
+					&.active {
+						background-color: $accent;
+					}
+					
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+		}
+
+		&-mini {
+			.owl-item:after {
+				content: "\f00e";
+			}
+		}		
+	}
 }
 
 .modal {
@@ -669,7 +743,7 @@ body {
 		&-list {
 			margin-bottom: 12px;
 		}
-	}
+	}	
 }
 
 .thanks {
