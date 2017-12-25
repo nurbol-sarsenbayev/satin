@@ -631,6 +631,16 @@ body {
 	}
 
 	&-certificate {
+		.owl-item {
+			height: 75vh;
+			img {
+				width: auto;
+				max-width: 100%;
+				margin: 0 auto;
+				max-height: 100%;
+			}
+		}
+
 		&, &-mini {
 			position: relative;		
 
@@ -698,8 +708,16 @@ body {
 		}
 
 		&-mini {
-			.owl-item:after {
-				content: "\f00e";
+			.owl-stage {
+				// max-height: 250px;				
+			}
+			.owl-item {
+				// max-height: 250px;
+				border: 1px solid #ccc;
+
+				&:after {
+					content: "\f00e";
+				}
 			}
 		}		
 	}

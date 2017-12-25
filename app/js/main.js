@@ -1,5 +1,16 @@
-$(function() {
+$(document).ready(function() {
 
+    var $wnd = $(window);
+    var $top = $(".page-top");
+    var $html = $("html, body");
+    var $header = $(".section-header");
+    var $headerMenu = $(".header-menu");
+    var $loader = $(".preloader");
+
+    $wnd.on('load', function() {
+        $loader.delay(0).fadeOut('slow');
+    });
+    
     $(".carousel-results").owlCarousel({
         items: 3,
         nav: true,
@@ -36,7 +47,7 @@ $(function() {
         autoplay: true,
         autoplayTimeout: 2000,
         navText: ['<i class="arrow-left">', '<i class="arrow-right">']
-    });0
+    });
 
     $(".carousel-certificate-mini").owlCarousel({
         nav: true,
@@ -45,7 +56,8 @@ $(function() {
         smartSpeed: 500,
         margin: 30,
         autoplay: false,
-        autoHeight: true,
+        autoWidth: true,
+        // autoHeight: true,
         autoplayTimeout: 2000,
         navText: ['<i class="arrow-left">', '<i class="arrow-right">'],
         responsive: {
@@ -56,12 +68,19 @@ $(function() {
             1200: { items: 5 }          
         },
         onChanged: function(event) {
-            $(".carousel-certificate-mini .owl-item").click(function(e) {
+            var owl = $(event.target);
+            var items = owl.find(".owl-item");
+            
+            owl.find('.owl-stage-outer').height(items.height()+2);
+
+            items.click(function(e) {
                 e.preventDefault();
-                var carousel = $(this).closest('.owl-carousel').data('owl.carousel');
+                var carousel = owl.data('owl.carousel');
                 var index = carousel.relative($(this).index());
 
-                var id = $(this).closest('.carousel-certificate-mini').data('id');
+                console.log('index', index);
+
+                var id = owl.data('id');
                 $("#" + id).fadeIn(500, function() {
                     var carousel2 = $(this).find('.owl-carousel').data('owl.carousel');
                     carousel2.to(index, 500);
@@ -77,17 +96,26 @@ $(function() {
         loop: true,
         smartSpeed: 500,
         margin: 30,
-        autoHeight: true,
+        // autoWidth: true,
+        // autoHeight: true,
         autoplayTimeout: 2000,
-        navText: ['<i class="arrow-left">', '<i class="arrow-right">']
-    });
+        responsive: {
+            0: { autoHeight: true },
+            768: { autoHeight: false },
+        },
+        navText: ['<i class="arrow-left">', '<i class="arrow-right">'],
+        onChanged: function(event) {
+            // var owl = $(event.target);
+            // var items = owl.find(".owl-item");
 
+            // owl.height(items.height());
+        }
+    });
 
     // $(".carousel-certificate img").click(function() {
     //     var el = $(this).closest('.carousel-certificate');
     //     el.fadeOut(500);
     // });
-
 
     $(".modal").click(function() {
         $(this).fadeOut(500);        
@@ -125,13 +153,6 @@ $(function() {
         var id = $(this).data("id");
         $("#" + id).fadeIn(500);
     });
-
-    var $wnd = $(window);
-    var $top = $(".page-top");
-    var $html = $("html, body");
-    var $header = $(".section-header");
-    var $headerMenu = $(".header-menu");
-    var $loader = $(".preloader");
 
     $wnd.scroll(function() { onscroll(); });
 
@@ -189,11 +210,5 @@ $(function() {
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
         }
     });
-
-    // $(document).on('load', function() {
-        $loader.delay(0).fadeOut('slow');
-    // });
-
-
 });
     
