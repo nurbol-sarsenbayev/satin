@@ -71,14 +71,14 @@ $(document).ready(function() {
             var owl = $(event.target);
             var items = owl.find(".owl-item");
             
-            owl.find('.owl-stage-outer').height(items.height()+2);
+            // setTimeout(function() {
+                owl.find('.owl-stage-outer').height(items.height()+2);                
+            // }, 100);
 
             items.click(function(e) {
                 e.preventDefault();
                 var carousel = owl.data('owl.carousel');
                 var index = carousel.relative($(this).index());
-
-                console.log('index', index);
 
                 var id = owl.data('id');
                 $("#" + id).fadeIn(500, function() {
@@ -143,7 +143,11 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    // $(".phone").mask("+7 (999) 999 99 99");
+    // $(".phone").mask("+7 (999) 999 99 99", {
+    //     completed: function() {
+    //         console.log(this.val());
+    //     }
+    // });
 
     var openThanks = function() {
         $(".thanks").css("display", "flex").hide().fadeIn(500);
@@ -157,7 +161,7 @@ $(document).ready(function() {
     $wnd.scroll(function() { onscroll(); });
 
     var onscroll = function() {
-        if($wnd.scrollTop() > $wnd.height()) {
+        if($wnd.scrollTop() > $(".section-main").height()) {
             $top.addClass('active');
             $header.removeClass('ontop');
         } else {

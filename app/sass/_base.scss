@@ -18,8 +18,8 @@ h1, h2, h3, h4, h5, p {
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
-	border-color: red;
-	//color: #666;
+	// border-color: red;
+	// color: red;
 }
 body input:required:valid,
 body textarea:required:valid {
@@ -185,14 +185,31 @@ body textarea:required:valid {
 	}
 }
 
+.error-message {
+	color: red;
+	position: relative;
+	top: -6px;
+	display: none;
+}
+
 .input, .textarea {
 	font-size: 15.41px;
 	font-family: "Lora";
 	color: rgb(0, 0, 0);
 	border: 1px solid #000;
+	outline: 0;
 	padding: 0px 10px;
 	height: 26px;
 	width: 100%;
+	
+	&:focus:required:invalid {
+		border-color: red;
+		color: red;
+
+		&+span {
+			display: block;
+		}
+	}
 }
 
 .textarea {
@@ -275,7 +292,6 @@ body textarea:required:valid {
 		}
 	}
 }
-
 
 .modal {
 	&-certificate {

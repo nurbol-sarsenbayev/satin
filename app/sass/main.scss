@@ -129,6 +129,7 @@ body {
 
 		&.ontop {
 			top: 30px;
+			background-color: transparent;
 		}
 	}
 
@@ -364,7 +365,7 @@ body {
 				margin-bottom: 16px;
 
 				&.short {
-					max-height: 185px;
+					max-height: 105px;
 					overflow: hidden;
 					text-overflow: ellipsis;	
 				}
