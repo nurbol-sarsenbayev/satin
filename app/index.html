@@ -60,7 +60,7 @@
 			</div>
 		</header>
 
-		<section class="section section-main" id="main" style="background-image:url('./img/section-main.png')">			
+		<section class="section section-main" id="main" style="background-image:url('./img/section-main.jpg')">			
 			<div class="container">
 				<div class="section-main-nav">
 					<div class="logo">
@@ -92,11 +92,9 @@
 										<div class="col-sm-6">
 											<input class="input" type="text" placeholder="Введите имя">
 										</div>
-										<!-- <div class="col-sm-6">
-											<input class="input" type="email" placeholder="Введите E-mail">
-										</div> -->
 										<div class="col-sm-6">
 											<input class="input phone" type="text" placeholder="Введите телефон*" required>										
+											<span class="error-message">Заполните это поле</span>
 										</div>
 										<div class="col-sm-6 col-sm-offset-3">
 											<input type="submit" class="button" value="Заказать услугу">
@@ -448,14 +446,14 @@
 									<p class="doctor-text">
 										Стаж работы 4 года. Проходила повышение в Ташкенте в школе косметологии BURDA в 2015. Чистка лица механическая, ультразвуковая и вакуумная. Пилинги поверхностные. Техники массажа лица-классический, пластический. Уходовые процедуры на косметике Sothys Франция, Christina Израиль, Gigi Израиль.
 									</p>
-									<div class="more inverse">
+									<!-- <div class="more inverse">
 										Подробнее
 										<img src="./img/arrow-inverse.png" alt="">												
-									</div>
+									</div> -->
 								</div>
 								<div class="clear"></div>
 								<p class="doctor-bold">Лицензии и сертификаты специалиста</p>
-								<button class="button">Посмотреть</button>						
+								<button class="button modal-open" data-id="modal-certificate-mini-2">Посмотреть</button>						
 							</div>
 						</div>
 					</div>
@@ -494,31 +492,69 @@
 					<div class="owl-carousel carousel-reviews border">
 						<div class="carousel-reviews-item">
 							<div class="carousel-reviews-item-img">
-								<img src="./img/review-1.jpg" alt="" class="img-responsive">
+								<img src="./img/Асель Абдиева.jpg" alt="" class="img-responsive">
 							</div>
 
-							<h4 class="carousel-reviews-item-title">Кадашникова Гаинэ<br>35 лет</h4>
+							<h4 class="carousel-reviews-item-title">Асель Абдиева</h4>
 
 							<div class="carousel-reviews-item-text">
-								<p>Я , Кадашникова Гаинэ , являюсь постоянным клиентом салона «Сатин» вот уже 3 года и очень довольна  своим  выбором. Мне нравится хорошая и сплоченная команда профессионалов своего дела, которые проходят постоянную переподготовку для совершенствования своего мастерства. Приятная атмосфера салона позволяет чувствовать себя комфортно у любого специалиста. Соблюдение санитарных требований повышает уровень доверия, позволяет не беспокоиться за здоровье.
-										Даже после переезда подальше от салона у меня нет желания искать других специалистов.
-										Благодарю каждого мастера салона «Сатин» за вклад в мое здоровье и красоту!</p>
+								<p>Еще один год пролетел, а мои предпочтения не изменились. Однажды я пришла в салон «SATIN» и с тех пор навсегда стала его самой преданной поклонницей. </p>
+								<p>Здесь очень приветливый персонал, отличная атмосфера, косметика шикарная. Чувствуешь себя в безопасности, потому что работают настоящие врачи-косметологи. Выходишь с процедуры и чувствуешь себя, как заново родившись. Сходите освежиться, всем очень рекомендую!</p>
 							</div>
 						</div>
 
 						<div class="carousel-reviews-item">
 							<div class="carousel-reviews-item-img">
-								<img src="./img/review-1.jpg" alt="" class="img-responsive">
+								<img src="./img/Айгерим Оразбаева.jpg" alt="" class="img-responsive">
 							</div>
 
-							<h4 class="carousel-reviews-item-title">Кадашникова Гаинэ<br>35 лет</h4>
+							<h4 class="carousel-reviews-item-title">Айгерим Оразбаева</h4>
 
 							<div class="carousel-reviews-item-text">
-								<p>Я , Кадашникова Гаинэ , являюсь постоянным клиентом салона «Сатин» вот уже 3 года и очень довольна  своим  выбором. Мне нравится хорошая и сплоченная команда профессионалов своего дела, которые проходят постоянную переподготовку для совершенствования своего мастерства. Приятная атмосфера салона позволяет чувствовать себя комфортно у любого специалиста. Соблюдение санитарных требований повышает уровень доверия, позволяет не беспокоиться за здоровье.
-										Даже после переезда подальше от салона у меня нет желания искать других специалистов.
-										Благодарю каждого мастера салона «Сатин» за вклад в мое здоровье и красоту!</p>
+								<p>Около шести лет назад я в первый раз пришла в салон “Satin” по рекомендации сестры. С тех пор я постоянный клиент у косметолога-дерматолога Оксаны Доронкиной. Очень благодарна Оксане Леонидовне! Считаю, что она специалист высокого класса. К своей работе всегда относится с душой. Близкие и друзья говорят, что выгляжу я прекрасно. Спасибо!</p>
 							</div>
 						</div>
+
+						<div class="carousel-reviews-item">
+							<div class="carousel-reviews-item-img">
+								<img src="./img/Карина Джиренбаева.jpg" alt="" class="img-responsive">
+							</div>
+
+							<h4 class="carousel-reviews-item-title">Карина Джиренбаева</h4>
+
+							<div class="carousel-reviews-item-text">
+								<p>Салонов в Алматы огромное количество, но всегда есть один, который мы любим, в который ходим, как к себе домой… Для меня таким стал “Satin”. Тут тебя все помнят, встречают, знают по имени. Это очень важно. И уровень услуг высокий, такой сложно найти. Для меня каждый поход в “Satin”, как терапия для прекрасного настроения!</p>
+							</div>
+						</div>
+
+						<div class="carousel-reviews-item">
+							<div class="carousel-reviews-item-img">
+								<img src="./img/Гаяне Акопян.jpg" alt="" class="img-responsive">
+							</div>
+
+							<h4 class="carousel-reviews-item-title">Гаяне Акопян</h4>
+
+							<div class="carousel-reviews-item-text">
+								<p>Я хожу в “Satin” уже три года и меня очень радует, что здешние мастера постоянно ездят на мастер-классы и повышают свою квалификацию.  Качество их услуг неизменно растет, и я считаю это лучим показателем.
+										Еще для меня очень важно, что в салоне “Satin” все косметические процедуры проводятся в абсолютной стерильности. Я сама по образованию врач и отлично понимаю, какую роль играет чистота при работе с лицом.
+										</p>
+								<p>Кроме того, обслуживаясь в “Satin”, я всегда получаю порцию приятных эмоций. Здесь очень услужливые девочки на ресепшн, приятные мастера, и атмосфера такая домашняя. Очень люблю это место и всегда советую подругам.</p>
+							</div>
+						</div>
+
+						<div class="carousel-reviews-item">
+							<div class="carousel-reviews-item-img">
+								<img src="./img/Марина Екимова.jpg" alt="" class="img-responsive">
+							</div>
+
+							<h4 class="carousel-reviews-item-title">Марина Екимова</h4>
+
+							<div class="carousel-reviews-item-text">
+								<p>Я посещаю “Satin” вот уже 8 лет подряд, и за все это время он меня ни разу не разочаровал. В отличие от многих простых парикмахерских, здесь всегда работают аккуратно и с любовью. Здесь хороший сервис, чудесные люди. Ну а качество услуг такое, что, даже переехав в другой конец города, я продолжаю ходить только сюда.</p>
+								<p> Удачи и побольше клиентов моему любимому салону красоты!</p>
+							</div>
+						</div>
+
 					</div>
 				</div>							
 			</div>
@@ -1042,17 +1078,17 @@
 			<i class="modal-close"></i>
 
 			<div class="owl-carousel carousel-certificate-mini" data-id="modal-certificate-1">
-				<img src="./img/certificates/thumbs/1 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/2 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/3 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/4 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/5 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/7 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/8 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/9 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/10 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/13 001.jpg" alt="">
-				<img src="./img/certificates/thumbs/14 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/1 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/2 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/3 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/4 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/5 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/7 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/8 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/9 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/10 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/13 001.jpg" alt="">
+				<img src="./img/certificates/01/thumbs/14 001.jpg" alt="">
 			</div>
 
 		</div>
@@ -1063,21 +1099,44 @@
 			<i class="modal-close"></i>
 
 			<div class="owl-carousel carousel-certificate">
-				<img src="./img/certificates/1 001.jpg" alt="">
-				<img src="./img/certificates/2 001.jpg" alt="">
-				<img src="./img/certificates/3 001.jpg" alt="">
-				<img src="./img/certificates/4 001.jpg" alt="">
-				<img src="./img/certificates/5 001.jpg" alt="">
-				<img src="./img/certificates/7 001.jpg" alt="">
-				<img src="./img/certificates/8 001.jpg" alt="">
-				<img src="./img/certificates/9 001.jpg" alt="">
-				<img src="./img/certificates/10 001.jpg" alt="">
-				<img src="./img/certificates/13 001.jpg" alt="">
-				<img src="./img/certificates/14 001.jpg" alt="">
+				<img src="./img/certificates/01/1 001.jpg" alt="">
+				<img src="./img/certificates/01/2 001.jpg" alt="">
+				<img src="./img/certificates/01/3 001.jpg" alt="">
+				<img src="./img/certificates/01/4 001.jpg" alt="">
+				<img src="./img/certificates/01/5 001.jpg" alt="">
+				<img src="./img/certificates/01/7 001.jpg" alt="">
+				<img src="./img/certificates/01/8 001.jpg" alt="">
+				<img src="./img/certificates/01/9 001.jpg" alt="">
+				<img src="./img/certificates/01/10 001.jpg" alt="">
+				<img src="./img/certificates/01/13 001.jpg" alt="">
+				<img src="./img/certificates/01/14 001.jpg" alt="">
 			</div>
 
 		</div>
 	</div>
+
+	<div class="modal" id="modal-certificate-mini-2">
+		<div class="modal-content">
+			<i class="modal-close"></i>
+
+			<div class="owl-carousel carousel-certificate-mini" data-id="modal-certificate-2">
+				<img src="./img/certificates/02/thumbs/20171201_123253.jpg" alt="">
+			</div>
+
+		</div>
+	</div>
+
+	<div class="modal" id="modal-certificate-2">
+		<div class="modal-content">
+			<i class="modal-close"></i>
+
+			<div class="owl-carousel carousel-certificate">
+				<img src="./img/certificates/02/20171201_123253.jpg" alt="">
+			</div>
+
+		</div>
+	</div>
+
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	<script src="js/libs.min.js"></script>

@@ -98,6 +98,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
+	.hamburger:hover {
+		opacity: 1;
+	}
+
 	.section {
 		&-services-gallery-item {
 			width: 50%;
@@ -108,7 +112,7 @@
 				top: 0;
 			}
 
-			background-color: rgba(#b6b6b6, 0.8);
+			background-color: rgba(#000, 0.6);
 
 			.header-nav {
 				align-items: center;
@@ -121,13 +125,16 @@
 				top: 100%;
 				left: 0;
 				right: 0;
-				background-color: rgba(#b6b6b6, 0.8);
+				background-color: rgba(#000, 0.6);
+				color: #fff;
 				// background: rgba(255,255, 255, 0.8);
 				display: none;
 				li {
 					display: block;
 					margin: 0 0 0 15px;
-
+					a {
+						color: #fff;
+					}
 				}
 			}
 		}
@@ -290,8 +297,25 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 	.section-main {
-		background-position: 0 0;
+		background-position: -100px 0;
 	}
 }
 	/**/
 
+@media only screen and (min-width : 1300px) {
+	.section-main {
+		background-position: 0px 0;
+	}
+}
+
+@media only screen and (min-width : 1500px) {
+	.section-main {
+		background-position: 100px 0;
+	}
+}
+
+@media only screen and (min-width : 1700px) {
+	.section-main {
+		background-position: 200px 0;
+	}
+}
