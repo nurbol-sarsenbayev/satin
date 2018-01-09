@@ -54,7 +54,7 @@ $(document).ready(function() {
         dots: true,
         loop: true,
         smartSpeed: 500,
-        margin: 30,
+        margin: 60,
         autoplay: false,
         autoWidth: true,
         // autoHeight: true,
@@ -65,7 +65,7 @@ $(document).ready(function() {
             480: { items: 2 },
             768: { items: 3 },
             992: { items: 4 },
-            1200: { items: 5 }          
+            // 1200: { items: 5 }          
         },
         onChanged: function(event) {
             var owl = $(event.target);
@@ -192,15 +192,23 @@ $(document).ready(function() {
     });
 
     $(".doctor .more").click(function() {
-        $(this).prev(".doctor-text").toggleClass('short');
+        var $txt = $(this).prev(".doctor-text"); //.toggleClass('short');
+
+        if($txt.hasClass('short')) {
+            $txt.removeClass('short');
+        } else {
+            $txt.addClass('short');
+        }
     })
 
     $(".hamburger").click(function() {
         $this = $(this);
-        $this.toggleClass("is-active");
-        if($this.hasClass("is-active")) {
+        // $this.toggleClass("is-active");
+        if(!$this.hasClass("is-active")) {
+            $this.addClass('is-active');
             $headerMenu.slideDown('700');
         } else {
+            $this.removeClass('is-active');
             $headerMenu.slideUp('700');
         }
         return false;
