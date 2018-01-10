@@ -77,7 +77,7 @@ gulp.task('imagemin', function() {
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'libs-js', 'main-js'], function() {
 
     var buildFiles = gulp.src([
-        'app/*.html',
+        'app/*.+(html|php)',
         'app/.htaccess',
     ]).pipe(gulp.dest('dist'));
 
@@ -100,9 +100,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'libs-js', 'main-js'], fun
 gulp.task('deploy', function() {
 
     var conn = ftp.create({
-        host:      'hostname.com',
-        user:      'username',
-        password:  'userpassword',
+        host:      'satinalmaty.kz',
+        user:      'satinalmaty@satinalmaty.kz',
+        password:  'Gy6603Oh]b5J',
         parallel:  10,
         log: gutil.log
     });
@@ -113,7 +113,7 @@ gulp.task('deploy', function() {
     ];
 
     return gulp.src(globs, {buffer: false})
-        .pipe(conn.dest('/path/to/folder/on/server'));
+        .pipe(conn.dest('/'));
 });
 
 gulp.task('rsync', function() {

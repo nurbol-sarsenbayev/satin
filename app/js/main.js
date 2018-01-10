@@ -132,7 +132,7 @@ $(document).ready(function() {
     $(".thanks-close").click(function() {
         $(".thanks").fadeOut(500);
         $form.find("input[type=text], textarea").val("");
-        $formQuestion.find("input[type=text], textarea").val("");
+        // $formQuestion.find("input[type=text], textarea").val("");
     });
 
     var $form = $(".form");
@@ -140,6 +140,19 @@ $(document).ready(function() {
     $form.submit(function(e) {
         openThanks();
         $(".modal").hide();
+
+        var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "/mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			// setTimeout(function() {
+			// 	// Done Functions
+			// 	th.trigger("reset");
+			// }, 1000);
+        });
+        
         e.preventDefault();
     });
 
