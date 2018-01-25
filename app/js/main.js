@@ -8,7 +8,7 @@ $(document).ready(function() {
     var $loader = $(".preloader");
 
     $wnd.on('load', function() {
-        $loader.delay(0).fadeOut('slow');
+        // $loader.delay(0).fadeOut('slow');
     });
     
     $(".carousel-results").owlCarousel({
