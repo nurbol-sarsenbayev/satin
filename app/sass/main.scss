@@ -227,6 +227,7 @@ body {
 					height: 187px;
 					margin-bottom: 48px;
 					transition: transform 0.3s;
+					cursor: pointer;
 
 					&:hover {
 						transform: scale(1.2, 1.2);
